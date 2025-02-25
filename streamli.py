@@ -7,6 +7,9 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import r2_score
 from keras.models import load_model
 from datetime import datetime
+import appdirs as ad
+
+ad.user_cache_dir = lambda *args: "/tmp"
 
 # Function to get stock data
 def get_stock_data(ticker, start_date, end_date):
